@@ -3,17 +3,22 @@ const SelectedDino = (props) => {
   const foodCost = Math.floor(weight / 5) + 1 || 0;
   //use objects to check if the math above works for each dino
   // console.log({dino: props.dino})
-  // console.log({foodCost: foodCost})
-
+  // console.log({foodCost: foodCost}) 
+  const food = carnivore ? "goat" : "tree"
+  const plural = foodCost > 1 && "s"
   // Only display this section if dino is selected, so since dino evaluates to an object that starts out with empty name key, check if name even exists 
-  const eats = props.dino.name && <p>Eats: {foodCost} {carnivore ? "goats" : "trees"}</p> 
+  const dinoEats = name && (<p>Eats: {foodCost} {food}{plural}</p>) 
+  // ORRRR render the following (null will be as if nothing exists so nothing will happen)
+  // {name ? (<p>...</p>) : null}
+  // ORRRRRRR you can use className with a css of hidden (make sure to import app.css so that it works)
+  //className={name && "hidden"} 
 
   return (
     <div className="selected-dino">
       <h3>Currently Selected Dinosaur</h3>
       <img className="dino-image" src={image} alt="Selected dinosaur image" />
       <p>{name || "No Dinosaur Selected"}</p>
-      {eats}
+      {dinoEats}
     </div>
   );
 };
