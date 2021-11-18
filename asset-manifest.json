@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Triassic-Park-React-App/static/css/main.e0ca8b80.chunk.css",
+    "main.js": "/Triassic-Park-React-App/static/js/main.984cf5d9.chunk.js",
+    "main.js.map": "/Triassic-Park-React-App/static/js/main.984cf5d9.chunk.js.map",
+    "runtime-main.js": "/Triassic-Park-React-App/static/js/runtime-main.d98fcc33.js",
+    "runtime-main.js.map": "/Triassic-Park-React-App/static/js/runtime-main.d98fcc33.js.map",
+    "static/js/2.aa48e3f5.chunk.js": "/Triassic-Park-React-App/static/js/2.aa48e3f5.chunk.js",
+    "static/js/2.aa48e3f5.chunk.js.map": "/Triassic-Park-React-App/static/js/2.aa48e3f5.chunk.js.map",
+    "static/js/3.d270800d.chunk.js": "/Triassic-Park-React-App/static/js/3.d270800d.chunk.js",
+    "static/js/3.d270800d.chunk.js.map": "/Triassic-Park-React-App/static/js/3.d270800d.chunk.js.map",
+    "index.html": "/Triassic-Park-React-App/index.html",
+    "static/css/main.e0ca8b80.chunk.css.map": "/Triassic-Park-React-App/static/css/main.e0ca8b80.chunk.css.map",
+    "static/js/2.aa48e3f5.chunk.js.LICENSE.txt": "/Triassic-Park-React-App/static/js/2.aa48e3f5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d98fcc33.js",
+    "static/js/2.aa48e3f5.chunk.js",
+    "static/css/main.e0ca8b80.chunk.css",
+    "static/js/main.984cf5d9.chunk.js"
+  ]
+}
