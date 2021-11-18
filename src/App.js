@@ -24,7 +24,6 @@ class App extends Component {
 
   render() {
     const { selectedDinosaur } = this.state;
-    const { image, name, weight, carnivore } = selectedDinosaur;
     const species = this.state.species.map((dinosaur) => {
       return (
         <DinosaurCard
@@ -37,7 +36,7 @@ class App extends Component {
 
     return (
       <div className="app" id="app-container">
-        <h1>Jurassic Parker</h1>
+        <h1>Triassic Park</h1>
         <SelectedDino dino={selectedDinosaur} />
         <div id="dinosaur-list-container">{species}</div>
       </div>

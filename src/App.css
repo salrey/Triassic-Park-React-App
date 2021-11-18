@@ -17,6 +17,7 @@
   text-align: center;
 }
 
+/* to avoid the blue section from moving depending on dino selected and displyed */
 .dino-image {
-  width: 150px;
+  height: 100px;
 }
