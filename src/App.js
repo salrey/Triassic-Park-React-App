@@ -3,11 +3,13 @@ import "./App.css";
 import data from "./data/dinosaurs";
 import DinosaurCard from "./components/DinosaurCard";
 import SelectedDino from "./components/SelectedDinosaur";
+import Park from "./components/Park";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
+      park: [],
       species: data.dinosaurs,
       selectedDinosaur: {
         name: "",
@@ -22,8 +24,17 @@ class App extends Component {
     });
   };
 
+  addDino = () => {
+    const { park, selectedDinosaur } = this.state
+    this.setState({
+      park: [...park, selectedDinosaur], 
+    })
+  } 
+
   render() {
-    const { selectedDinosaur } = this.state;
+    const { selectedDinosaur, park } = this.state;
+    // check state using object
+    // console.log({park: this.state.park})
     const species = this.state.species.map((dinosaur) => {
       return (
         <DinosaurCard
@@ -33,12 +44,16 @@ class App extends Component {
         />
       );
     });
+    const addToPark = selectedDinosaur.name && (<button onClick={this.addDino}>Add to Park</button>) 
 
     return (
       <div className="app" id="app-container">
         <h1>Triassic Park</h1>
         <SelectedDino dino={selectedDinosaur} />
+        {addToPark}
         <div id="dinosaur-list-container">{species}</div>
+        {/* REACT still renders a 0 value and NaN as truthy */}
+        {park.length > 0 && <Park park={park}/>}
       </div>
     );
   }

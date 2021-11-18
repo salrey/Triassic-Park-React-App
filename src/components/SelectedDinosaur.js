@@ -1,6 +1,7 @@
 const SelectedDino = (props) => {
   const { image, name, weight, carnivore } = props.dino;
-  const foodCost = Math.floor(weight / 5) + 1 || 0;
+  //user .ceil vs floor to round up, otherwise you'll have to + 1
+  const foodCost = Math.ceil(weight / 5) || 0;
   //use objects to check if the math above works for each dino
   // console.log({dino: props.dino})
   // console.log({foodCost: foodCost}) 
