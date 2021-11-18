@@ -17,7 +17,7 @@ const SelectedDino = (props) => {
   return (
     <div className="selected-dino">
       <h3>Currently Selected Dinosaur</h3>
-      <img className="dino-image" src={image} alt="Selected dinosaur image" />
+      <img className="dino-image" src={image} alt="Selected dinosaur" />
       <p>{name || "No Dinosaur Selected"}</p>
       {dinoEats}
     </div>

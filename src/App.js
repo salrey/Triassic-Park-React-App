@@ -4,6 +4,7 @@ import data from "./data/dinosaurs";
 import DinosaurCard from "./components/DinosaurCard";
 import SelectedDino from "./components/SelectedDinosaur";
 import Park from "./components/Park";
+import NewSpeciesForm from "./components/NewSpeciesForm";
 
 class App extends Component {
   constructor() {
@@ -31,6 +32,13 @@ class App extends Component {
     })
   } 
 
+  addSpecies = (newSpecies) => {
+    newSpecies.id = this.state.species.length + 1
+    this.setState({
+      species: [...this.state.species, newSpecies]
+    })
+  }
+
   render() {
     const { selectedDinosaur, park } = this.state;
     // check state using object
@@ -54,6 +62,7 @@ class App extends Component {
         <div id="dinosaur-list-container">{species}</div>
         {/* REACT still renders a 0 value and NaN as truthy */}
         {park.length > 0 && <Park park={park}/>}
+        <NewSpeciesForm clickHandler={this.addSpecies}/>
       </div>
     );
   }
